@@ -4,9 +4,8 @@
     <div class="nav-menu-inner">
         <ul>
             <li><router-link class="outer-shadow hover-in-shadow" to="/">Home</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/about">About</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/about">Portafolio</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/about">Otros</router-link></li>
+            <li><router-link class="outer-shadow hover-in-shadow" to="/About">About</router-link></li>
+            <li><router-link class="outer-shadow hover-in-shadow" to="/Portafolio">Portafolio</router-link></li>
             <li><router-link class="outer-shadow hover-in-shadow" to="/contact">Contacto</router-link></li>
         </ul>
     </div>
@@ -31,6 +30,7 @@ export default {
 <style scoped>
 
 .nav-menu{
+
     position: fixed;
     background-color: var(--bg-black-50);
     padding: 0 15px;
@@ -38,7 +38,8 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 800;
+    z-index: 999;
+    transition: all 0.3s ease;  
 }
 .nav-menu .close-nav-menu{
     height: 40px;

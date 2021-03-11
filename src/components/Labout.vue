@@ -11,9 +11,24 @@
               <div class="img-box inner-shadow">
                   <img class="outer-shadow" src="https://pa1.narvii.com/6266/c2e978d7acc8ee44e3af9fb7b05418a4955299b7_hq.gif">
               </div>
+              <!-- social links start-->
+              <div class="social-links">
+                <social :icon="'fab fa-instagram'" :name="'instagram'" :link="home"></social>
+                <social :icon="'fab fa-linkedin-in'" :name="'linkedin'" :link="home"></social>
+                <social :icon="'fab fa-facebook-f'" :name="'facebook'" :link="home"></social>
+                <social :icon="'fab fa-github'" :name="'github'" :link="home"></social>
+              </div>
+              <!-- social links end-->
           </div>
-          <div class="about-info">
-              <p><span>Hi my name is Juan David</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero inventore quae reprehenderit quas natus modi voluptates asperiores dicta maiores! Earum, at cumque debitis iusto illo veniam exercitationem similique rerum sequi!</p>
+          <div class="about-info" id="about-info">
+              <p><span>Hi my name is Juan David</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero inventore quae reprehenderit quas natus modi voluptates asperiores dicta maiores! Earum,
+                 at cumque debitis iusto illo veniam exercitationem similique rerum sequi!
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem dolorem vitae at consectetur voluptate et accusantium quae dolorum quas, eaque,
+                 dolore sequi recusandae obcaecati molestias reprehenderit repellendus excepturi modi?</p>
+              <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+              <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
           </div>
       </div>
     </div>
@@ -21,14 +36,21 @@
 </template>
 
 <script>
-export default {
+import Social from "./Social.vue"
 
+export default {
+  components: { Social },
+  setup(){
+    const socials = {}
+
+    return {socials}
+    }
 }
 </script>
 
 <style>
 .about-section{
-    padding: 80px 0 80px;
+    padding: 50px 0 50px;
     min-height: 100vh;
 }
 
@@ -49,6 +71,11 @@ export default {
     border-radius: 5px;
 }
 
+.about-section .about-img .social-links{
+    margin-top: 20px;
+    text-align: center;
+}
+
 .about-section .about-info{
     flex: 0 0 60%;
     max-width: 60%;
@@ -65,5 +92,10 @@ export default {
 .about-section .about-info span{
     font-weight: 600;
     color: var(--bg-black-900)
+}
+
+.about-section .about-info .btn-1{
+    margin: 30px 20px 0 0;
+    
 }
 </style>

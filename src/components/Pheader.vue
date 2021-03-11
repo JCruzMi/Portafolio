@@ -21,21 +21,6 @@ export default {
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-.btn-1{
-  padding: 10px 25px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--bg-black-900);
-  background-color: transparent;
-  line-height: 1.5;
-  cursor: pointer;
-  border-radius: 30px;
-  transition: all 0.3 s ease;
-  display: inline-block;
-}
-.btn-1:after{
-  border-radius: 30px;
-}
 
 .wrapper .btn-1{
   margin-top: 30px;

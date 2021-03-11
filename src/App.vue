@@ -20,10 +20,18 @@ export default {
 </script>
 
 <style>
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 :root{
   --bg-black-900: #000;
   --bg-black-100: #ddd;
+  --text-salmon-700: #FC6D6D;
   --text-black-600: rgb(141, 141, 141);
   --bg-black-50: #eff0f4;
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
@@ -108,6 +116,22 @@ img{
 .effect-wrap .effect{
   position: absolute;
   z-index: -1;
+}
+
+.btn-1{
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bg-black-900);
+  background-color: transparent;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3 s ease;
+  display: inline-block;
+}
+.btn-1:after{
+  border-radius: 30px;
 }
 
 .effect-1{

@@ -1,7 +1,7 @@
 <template>
     <div class="icon">
-        <div href="#" class="tool-tip outer-shadow hover-in-shadow">{{ name }}</div>
-        <a href="#"  class="outer-shadow hover-in-shadow"><i :class="icon"></i></a>
+        <div class=""><a class="tool-tip outer-shadow hover-in-shadow" :href="link" target="_blank">{{name}}</a></div>
+        <a :href="link" target="_blank" class="outer-shadow hover-in-shadow"><i :class="icon"></i></a>
     </div>
 </template>
 

@@ -13,10 +13,10 @@
               </div>
               <!-- social links start-->
               <div class="social-links">
-                <social :icon="'fab fa-instagram'" :name="'instagram'" :link="home"></social>
-                <social :icon="'fab fa-linkedin-in'" :name="'linkedin'" :link="home"></social>
-                <social :icon="'fab fa-facebook-f'" :name="'facebook'" :link="home"></social>
-                <social :icon="'fab fa-github'" :name="'github'" :link="home"></social>
+                <social :icon="'fab fa-instagram'" :name="'instagram'" :link="'https://www.instagram.com/huanmurato/'"></social>
+                <social :icon="'fab fa-linkedin-in'" :name="'linkedin'" :link="'https://www.linkedin.com/in/juan-david-cruz-huan/'"></social>
+                <social :icon="'fab fa-facebook-f'" :name="'facebook'" :link="'https://www.facebook.com/juandavid.cruzmiranda'"></social>
+                <social :icon="'fab fa-github'" :name="'github'" :link="'https://github.com/JCruzMi/'"></social>
               </div>
               <!-- social links end-->
           </div>

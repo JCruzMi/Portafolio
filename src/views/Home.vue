@@ -1,5 +1,6 @@
 <template>
 <!-- home section start -->
+
   <div class="home-section section">
     <!-- animaations start -->
     <div class="effect-wrap">
@@ -21,6 +22,7 @@
       </div>
     </div>
   </div>
+
 <!-- home section end -->
 <!-- little about section start -->
   <Labout />

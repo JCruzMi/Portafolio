@@ -11,7 +11,6 @@
         </div>
     </div>
   </div>
-  <router-view/>
 </template>
 
 <script>
@@ -72,9 +71,12 @@ fuentes
     cursor: pointer;
     border-radius: 50%;
     justify-content: center;
-    transition: all 0.3s ease;
-
+    animation: pulse;
+    animation-delay: 1.2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+
 .header .hamburger-btn:after{
     border-radius: 50%;
 }

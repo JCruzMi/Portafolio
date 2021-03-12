@@ -20,6 +20,7 @@ export default {
         const mNav = inject("mNav")
         const onMenuClick = () => {
             mNav.value = !mNav.value
+            window.scrollTo(0, 0)
         }
 
         return {mNav,onMenuClick}
@@ -39,7 +40,6 @@ export default {
     width: 100%;
     height: 100%;
     z-index: 999;
-    transition: all 0.3s ease;  
 }
 .nav-menu .close-nav-menu{
     height: 40px;
@@ -53,8 +53,7 @@ export default {
     color: #000;
     text-align: center;
     position: absolute;
-    cursor: pointer;
-    transition: all 0.3s ease;    
+    cursor: pointer;    
 }
 .nav-menu .close-nav-menu:after{
     border-radius: 50%;
@@ -84,11 +83,14 @@ export default {
     font-weight: 600;
     color: #000;
     padding: 5px 30px;
-    transition: all 0.3s ease;
 }
 
 #nav a.router-link-exact-active {
   color: #FC6D6D;
+  animation: pulse;
+    animation-delay: 1.2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   box-shadow: var(--inner-shadow)
 }
 

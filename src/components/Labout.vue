@@ -27,7 +27,7 @@
               </p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem dolorem vitae at consectetur voluptate et accusantium quae dolorum quas, eaque,
                  dolore sequi recusandae obcaecati molestias reprehenderit repellendus excepturi modi?</p>
-              <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+              <router-link class="btn-1 outer-shadow hover-in-shadow" to="/About">More About Me</router-link>
               <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
           </div>
       </div>

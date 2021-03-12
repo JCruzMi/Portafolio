@@ -18,7 +18,7 @@ export default {
 
 <style>
 .contact-section{
-  padding: 80px 0 80px;
+  padding: 50px 0 0;
   min-height: 100vh;
 }
 </style>

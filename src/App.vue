@@ -1,6 +1,19 @@
 <template>
   <Head />
-  <Nav v-if="mNav" />
+  <transition 
+    enter-active-class="animate__animated animate__lightSpeedInRight" 
+    leave-active-class="animate__animated animate__lightSpeedOutRight"
+    mode="out-in"  
+  >
+    <Nav v-if="mNav" />
+  </transition>
+  <transition 
+    enter-active-class="animate__animated animate__fadeInLeft" 
+    leave-active-class="animate__animated animate__fadeOutLeft"
+    mode="out-in"  
+  >
+    <router-view/>
+  </transition>
 </template>
 
 <script>
@@ -22,6 +35,7 @@ export default {
 <style>
 html{
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {

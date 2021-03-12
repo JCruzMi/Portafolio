@@ -32,7 +32,9 @@ export default {
     color: var(--text-black-600);
     margin: 0 4px;
     border-radius: 50%;
-    transition: all 0.4s cubiz-bezier(0.68,-0.55,0.265,1.55);
+    animation: cubiz-bezier(0.68,-0.55,0.265,1.55);
+    transition: all 0.4s;
+    
 }
 
 a:after{
@@ -57,7 +59,6 @@ a:hover{
     font-size: 16px;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s cubic-bezier(o.68, -0.55,0.265,1.15);
 }
 
 .icon .tool-tip:after{
@@ -68,6 +69,9 @@ a:hover{
 .icon:hover .tool-tip{
     opacity: 1;
     pointer-events: auto;
+    animation: fadeInUp;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
 }
 
 

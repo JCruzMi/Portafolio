@@ -1,7 +1,7 @@
 <template>
 <!-- home section start -->
 
-  <div class="home-section section">
+  <div class="animate__animated animate__fadeInLeft home-section section">
     <!-- animaations start -->
     <div class="effect-wrap">
       <div class="effect effect-1"></div>
@@ -25,8 +25,8 @@
 
 <!-- home section end -->
 <!-- little about section start -->
+  
   <Labout />
-
 
 <!-- little about section end -->
 </template>

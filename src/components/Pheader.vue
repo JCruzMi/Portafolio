@@ -8,7 +8,7 @@
       <li><span>Developer</span></li>
       <li><span>Freelancer</span></li>
     </ul>
-    <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+    <a href="#Labout" class="found btn-1 outer-shadow hover-in-shadow">About Me</a>
   </div>
 </template>
 
@@ -34,6 +34,10 @@ export default {
   font-size: 18px;
   text-transform: capitaliza;
   margin: 0;
+}
+
+.wrapper .found{
+  background-color: var(--bg-black-50);
 }
 .wrapper .static-txt{
   font-family: 'Poppins', sans-serif;

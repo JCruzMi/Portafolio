@@ -4,6 +4,7 @@
       <div class="row">
         <div class="section-title">
           <h2> portafolio</h2>
+          <a><router-link class="outer-shadow hover-in-shadow" to="/Contact">Portafolio</router-link></a>
         </div>
       </div>
     </div>

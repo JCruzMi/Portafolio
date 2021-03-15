@@ -96,9 +96,11 @@ img{
 }
 .outer-shadow{
   box-shadow: var(--outer-shadow);
+  transition: all 0.3s ease;
 }
 .inner-shadow{
-  box-shadow: var(--inner-shadow)
+  box-shadow: var(--inner-shadow);
+  transition: all 0.3s ease;
 }
 .hover-in-shadow{
   position: relative;

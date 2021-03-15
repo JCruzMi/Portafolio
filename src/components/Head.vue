@@ -71,10 +71,6 @@ fuentes
     cursor: pointer;
     border-radius: 50%;
     justify-content: center;
-    animation: pulse;
-    animation-delay: 1.2s;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 .header .hamburger-btn:after{

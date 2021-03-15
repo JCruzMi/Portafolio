@@ -3,10 +3,10 @@
     <div class="close-nav-menu outer-shadow hover-in-shadow" @click="onMenuClick()">&times;</div>
     <div class="nav-menu-inner">
         <ul>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/">Home</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/About">About</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/Portafolio">Portafolio</router-link></li>
-            <li><router-link class="outer-shadow hover-in-shadow" to="/contact">Contacto</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/">Home</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/About">About</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/Portafolio">Portafolio</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/contact">Contacto</router-link></li>
         </ul>
     </div>
   </div>
@@ -87,6 +87,7 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #FC6D6D;
+  transition: all 0.3s ease;
   animation: pulse;
     animation-delay: 1.2s;
     animation-duration: 3s;

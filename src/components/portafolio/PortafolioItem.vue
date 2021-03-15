@@ -48,6 +48,7 @@ export default {
 .portafolio-item .portafolio-item-img img{
     border-radius: 5px;
     width: 100%;
+    transition: all 0.3s ease;
 }
 
 .portafolio-item .portafolio-item-inner p{
@@ -77,4 +78,14 @@ export default {
     animation-iteration-count: 0;
 }
 
+@media only screen and (max-width: 700px) {
+  .portafolio-item{
+    flex:0 0 100%;
+    max-width: 100%;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 </style>

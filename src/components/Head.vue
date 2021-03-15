@@ -1,32 +1,58 @@
 <template>
-  <div class="header" id="header">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="logo">
-                <router-link to="/">J</router-link>
-            </div>
-            <div class="hamburger-btn outer-shadow hover-in-shadow" @click="onMenuClick()">
-                <span></span>
+    <div class="header" id="header">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="logo">
+                    <router-link to="/">J</router-link>
+                </div>
+                <div class="hamburger-btn outer-shadow hover-in-shadow" @click="onMenuClick()">
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
-  </div>
+    <div class="style-swich">
+        <div class="day-night s-icon outer-shadow hover-in-shadow" 
+            @click="onBg()"
+            v-if="bg==''"
+        >
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow" 
+            @click="onBg()"
+            v-else
+        >
+            <i class="fas fa-sun"></i>
+        </div>
+    </div>
 </template>
 
 <script>
 
-import {inject} from 'vue'
+import {ref, inject} from 'vue'
 
 export default {
     setup(){
         const mNav = inject("mNav")
 
         const onMenuClick = () => {
-            mNav.value = !mNav.value
-            console.log(mNav.value)   
+            mNav.value = !mNav.value   
         }
 
-        return {mNav,onMenuClick}
+        const bg = ref("")
+
+        const onBg = () =>{
+            if(bg.value == ""){
+                document.body.classList.add('dark')
+                bg.value = "dark"
+            }else{
+                document.body.classList.remove('dark')
+                bg.value = ""
+            }
+        }
+
+
+        return {mNav,onMenuClick,onBg, bg}
     }
 }
 </script>
@@ -39,6 +65,37 @@ fuentes
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+.style-swich{
+    position: fixed;
+    right: 0;
+    top: 77px;
+    padding: 15px;
+    width: 200px;
+    z-index: 102;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(65%)
+}
+
+.style-swich .s-icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--text-black-900);
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.style-swich .s-icon i{
+    line-height: 40px;
+}
+.style-swich .s-icon:after{
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
 
 .header{
     padding: 20px 15px;

@@ -28,7 +28,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem dolorem vitae at consectetur voluptate et accusantium quae dolorum quas, eaque,
                  dolore sequi recusandae obcaecati molestias reprehenderit repellendus excepturi modi?</p>
               <router-link class="btn-1 outer-shadow hover-in-shadow" to="/About">More About Me</router-link>
-              <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+              <router-link to="/Contact" class="btn-1 outer-shadow hover-in-shadow">Contact</router-link>
           </div>
       </div>
     </div>
@@ -97,5 +97,16 @@ export default {
 .about-section .about-info .btn-1{
     margin: 30px 20px 0 0;
     
+}
+
+@media(max-width: 590px){
+  .about-section .about-info,
+  .about-section .about-img{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about-section .about-img{
+    padding-bottom: 30px;
+  }
 }
 </style>

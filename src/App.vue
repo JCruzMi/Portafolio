@@ -33,6 +33,35 @@ export default {
 </script>
 
 <style>
+/**Light mode */
+:root{
+  --bg-black-900: #000;
+  --bg-black-100: #ddd;
+  --bg-black-50: #eff0f4;
+  --text-black-900: #000;
+  --text-black-600: rgb(141, 141, 141);
+  --text-salmon-700: #FC6D6D;
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+/**Dark mode */
+body.dark{
+  --bg-black-900: #fff;
+  --bg-black-100: #353535;
+  --bg-black-50: #2b2c2f;
+  --text-black-900: #fff;
+  --text-black-600: #bbb;
+  --text-salmon-700: #FC6D6D;
+  --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+  --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+  --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+  --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
+}
+
+/**End Dark mode */
+
 html{
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -40,17 +69,6 @@ html{
 
 ::-webkit-scrollbar {
     display: none;
-}
-
-:root{
-  --bg-black-900: #000;
-  --bg-black-100: #ddd;
-  --text-salmon-700: #FC6D6D;
-  --text-black-600: rgb(141, 141, 141);
-  --bg-black-50: #eff0f4;
-  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
-  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;;
 }
 
 body{
@@ -105,6 +123,7 @@ img{
 .hover-in-shadow{
   position: relative;
   z-index: 1;
+  transition: all 0.3s ease;
 }
 
 .hover-in-shadow:hover{
@@ -123,6 +142,7 @@ img{
 
 .hover-in-shadow:hover:after{
   box-shadow: var(--inner-shadow);
+  transition: all 0.3s ease;
 }
 
 .align-items-center{
@@ -143,8 +163,9 @@ img{
   line-height: 1.5;
   cursor: pointer;
   border-radius: 30px;
-  transition: all 0.3 s ease;
+  transition: all 0.5 s ease;
   display: inline-block;
+  border: none;
 }
 .btn-1:after{
   border-radius: 30px;

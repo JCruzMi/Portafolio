@@ -80,4 +80,18 @@ export default {
   border: 10px solid transparent;
 }
 
+@media(max-width: 767px){
+  .home-section .home-text,
+  .home-section .home-img{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home-section .home-text{
+    order: 2;
+  }
+  .home-section .home-text{
+    text-align: center;
+  }
+}
+
 </style>

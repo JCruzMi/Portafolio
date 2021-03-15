@@ -31,7 +31,7 @@ export default {
 }
 .wrapper p{
   color: var(--bg-black-900);
-  font-size: 18px;
+  font-size: 20px;
   text-transform: capitaliza;
   margin: 0;
 }
@@ -90,6 +90,14 @@ export default {
     left: 0;
   }
 }
-
+@media(max-width: 411px){
+  .wrapper .static-txt{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .dynamic-txts li{
+    font-size: 40px;
+  }
+}
 
 </style>

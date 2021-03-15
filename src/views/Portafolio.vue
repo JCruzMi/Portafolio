@@ -131,4 +131,5 @@ export default {
 .portafolio-section .about-tabs .tab-item.active{
   color: var(--text-salmon-700);
 }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <p>Hola!</p>
+    <p>Hi!</p>
     <div class="static-txt">I'm a</div>
     <ul class="dynamic-txts">
       <li><span>Sketcher</span></li>

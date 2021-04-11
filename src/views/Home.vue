@@ -16,7 +16,7 @@
         </div>
         <div class="home-img">
           <div class="img-box inner-shadow">
-            <img class="outer-shadow" src="https://media.discordapp.net/attachments/809903524463902752/819316880908222524/pruebaMediv2live2d.png?width=528&height=528">
+            <img class="outer-shadow" src="https://media.discordapp.net/attachments/804511906735718421/830860267126521876/emotes.png?width=522&height=522">
           </div>
         </div>
       </div>

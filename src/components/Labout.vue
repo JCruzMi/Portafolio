@@ -9,7 +9,7 @@
       <div class="row">
           <div class="about-img">
               <div class="img-box inner-shadow">
-                  <img class="outer-shadow" src="https://pa1.narvii.com/6266/c2e978d7acc8ee44e3af9fb7b05418a4955299b7_hq.gif">
+                  <img class="outer-shadow" src="https://media.discordapp.net/attachments/804511906735718421/830860478083104788/emotesjaja.png?width=522&height=522">
               </div>
               <!-- social links start-->
               <div class="social-links">

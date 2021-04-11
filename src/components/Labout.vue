@@ -21,12 +21,10 @@
               <!-- social links end-->
           </div>
           <div class="about-info" id="about-info">
-              <p><span>Hi my name is Juan David</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Libero inventore quae reprehenderit quas natus modi voluptates asperiores dicta maiores! Earum,
-                 at cumque debitis iusto illo veniam exercitationem similique rerum sequi!
+              <p><span>Hola! mi nombre es Juan David</span> soy un egresado de la universidad EAN con titulo en ingenieria en sistemas, he desarrolaldo varios cursos dentro de mi
+              ambito laboral y fuera de ellos.
               </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem dolorem vitae at consectetur voluptate et accusantium quae dolorum quas, eaque,
-                 dolore sequi recusandae obcaecati molestias reprehenderit repellendus excepturi modi?</p>
+              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programacion, dibujar y jugar diveojuegos</p>
               <router-link class="btn-1 outer-shadow hover-in-shadow" to="/About">More About Me</router-link>
               <router-link to="/Contact" class="btn-1 outer-shadow hover-in-shadow">Contact</router-link>
           </div>

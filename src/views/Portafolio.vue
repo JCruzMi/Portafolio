@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 import PortafolioItem from '../components/portafolio/PortafolioItem.vue'
 
 export default {
@@ -52,6 +52,11 @@ export default {
       const web = ref(false)
       const experiments = ref(false)
       const others = ref(false)
+      provide("alls",all)
+      provide("webs",web)
+      provide("experiments",experiments)
+      provide("others",others)
+
       const OnAll = () => {
           web.value = false
           experiments.value = false

@@ -3,29 +3,16 @@
     <div class="timeline">
       <div class="row">
         <!-- duplicate timeline -->
-        <div class="timeline-item">
+        <div class="timeline-item" v-for="item in items" :key="item">
           <div class="timeline-item-inner outer-shadow">
             <i class="fas fa-briefcase icon"></i>
-            <span>Student, 2016-2021</span>
-            <h3>Ingeniera en Sistemas</h3>
-            <h4>EAN</h4>
-            <p>Graduado de la universidad EAN.</p>                  
+            <span>{{item.fecha}}</span>
+            <h3>{{item.nombre}}</h3>
+            <h4>{{item.compa}}</h4>
+            <p>{{item.desc}}</p>                  
           </div>
         </div>
         <!-- duplicate timeline -->
-        <div class="timeline-item">
-          <div class="timeline-item-inner outer-shadow">
-            <i class="fas fa-briefcase icon"></i>
-            <span>ToDo</span>
-            <h3>Full stack developer</h3>
-            <h4>Company name</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Omnis harum dignissimos ipsum, 
-              a fugit ducimus, sit voluptatibus 
-              recusandae illum asperiores non voluptas hic.
-              Eveniet, dicta vel aut similique eius repudiandae.</p>                  
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -34,6 +21,15 @@
 <script>
 export default {
   setup(){
+
+    return{
+      items:[
+        {fecha: "2018-2021", nombre: "MARATONES DE PROGRAMACIÓN", compa:"Universidad EAN", desc : "Participación en maratones internas, interuniversitarias y nacionles de programacion; Lider maratonista."},
+        {fecha: "2020-2020", nombre: "COVID-APP", compa:"Proyecto Universitario", desc : "Desarrollo de una aplicacion web de inicio a fin con Angular que hace seguimiento cada 5 minutos al Covid-19 mediante una API dada por una universidad."},
+        {fecha: "2021-2021", nombre: "EVENTOS SEMILLEROS", compa:"Proyecto Universidad EAN", desc : "Creación de mockups y desarrollo web frontend de una aplicacion web que permite crear eventos y ver eventos pasados."},
+      ]
+    }
+
     // Realizar guardado de todo el recorrido y mandarlo a la vista
   }
 }

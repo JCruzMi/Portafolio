@@ -1,7 +1,10 @@
 <template>
-    <div class="icon">
-        <div class=""><a class="tool-tip outer-shadow hover-in-shadow" :href="link" target="_blank">{{name}}</a></div>
+    <div class="icon" v-if="icon">
+        <div class="oll"><a class="tool-tip outer-shadow hover-in-shadow" :href="link" target="_blank">{{name}}</a></div>
         <a :href="link" target="_blank" class="outer-shadow hover-in-shadow"><i :class="icon"></i></a>
+    </div>
+    <div class="icon" v-else>
+        <div class="all"><a class="tool-top outer-shadow hover-in-shadow" :href="link" target="_blank">{{name}}</a></div>
     </div>
 </template>
 
@@ -74,5 +77,24 @@ a:hover{
     animation-iteration-count: 1;
 }
 
+.icon .all .tool-top{
+    font-weight: 600;
+    color: var(--bg-black-900);
+    text-transform: capitalize;
+    margin: 2.2px;
+    padding: 0px 10px 2px 10px;
+    border-radius: 25px;
+    display: block;
+    line-height: 40px;
+    width: auto;
+    height: 40px;
+    font-size: 16px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.icon .all .tool-top:after{
+    border-radius: 25px;
+}
 
 </style>

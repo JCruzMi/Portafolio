@@ -74,7 +74,7 @@ fuentes
     z-index: 102;
     border-radius: 5px;
     transition: all 0.3s ease;
-    transform: translateX(65%)
+    transform: translateX(65%);
 }
 
 .style-swich .s-icon{
@@ -88,6 +88,7 @@ fuentes
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.3s ease;
+    background-color: var(--bg-black-50);
 }
 .style-swich .s-icon i{
     line-height: 40px;
@@ -112,11 +113,10 @@ fuentes
     line-height: 36px;
     height: 40px;
     width: 40px;
-    font-size: 24px;
-    color: #000;
-    border-radius: 50%;
+    font-size: 40px;
+    color: var(--bg-black-900);
+    text-shadow: -2px -1px #da575c;
     font-family: 'Poppins', sans-serif;
-    border: 2px solid #000;
 }
 
 

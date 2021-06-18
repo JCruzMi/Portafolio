@@ -24,15 +24,9 @@
   </div>
 
 <!-- home section end -->
-<!-- little about section start -->
-  
-  <Labout />
-
-<!-- little about section end -->
 </template>
 
 <script>
-import Labout from '../components/Labout.vue'
 import Pheader from '../components/Pheader.vue'
 
 // @ is an alias to /src
@@ -41,10 +35,7 @@ import Pheader from '../components/Pheader.vue'
 export default {
   name: 'Home',
   components: {
-    Pheader,
-    Labout
-    
-    
+    Pheader
   }
 }
 </script>

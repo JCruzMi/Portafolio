@@ -20,19 +20,19 @@ export default {
 <style>
 
 .stage-wrapper{
-    width: 50%;
-    height: 50vh;
+    width: 45%;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-black-50);
     filter: blur(10px) contrast(30);
 }
 
 .effect-5{
   width: 100px;
   height: 100px;
-  background: rgb(0, 0, 0);
+  background: var(--bg-black-900);
   display: inline-block;
   transform: rotate(45deg);
   animation: goevy 5s ease-in-out infinite;
@@ -41,7 +41,7 @@ export default {
 .effect-6{
   width: 100px;
   height: 100px;
-  background: rgb(0, 0, 0);
+  background: var(--bg-black-900);
   display: inline-block;
   border-radius: 50%;
   animation: goevy 5s ease-in-out infinite;

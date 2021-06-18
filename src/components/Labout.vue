@@ -48,7 +48,7 @@ export default {
 
 <style>
 .about-section{
-    padding: 50px 0 50px;
+    padding: 80px 0 80px;
     min-height: 100vh;
 }
 

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="section-title">
-          <h2> portafolio</h2>
+          <h2>portafolio</h2>
           <div class="about-tabs">
             <span 
               class="tab-item" 
@@ -28,6 +28,13 @@
               :class="others && 'active outer-shadow'" 
               @click="OnOthers()">
                 Others
+            </span>
+            <span
+              class="tab-item">
+                <router-link to="/prueba">
+                  ...
+                </router-link>
+                
             </span>
           </div>
         </div>

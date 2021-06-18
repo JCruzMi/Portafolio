@@ -66,8 +66,8 @@ export default {
   setup(){
     return{
       items : [
-        {icon:  "fas fa-phone", name: "Phone", text: "10000001" },
-        {icon:  "fas fa-envelope", name: "Email", text: "info@gmail.com" },
+        {icon:  "fas fa-phone", name: "Phone", text: "3184247598" },
+        {icon:  "fas fa-envelope", name: "Email", text: "juan.murato.cruz@gmail.com" },
         {icon:  "fas fa-map-marker-alt", name: "Addres", text: "Bogota" }
       ]
     }

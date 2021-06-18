@@ -65,7 +65,7 @@ export default {
     position: absolute;
     margin-top: -1.5rem;
     margin-left: 7.2rem;
-    z-index: 999;
+    z-index: 97;
     font-size: 20px;
     background-color: var(--bg-black-50);
     border-radius: 20px;

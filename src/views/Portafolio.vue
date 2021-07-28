@@ -65,6 +65,7 @@ export default {
       provide("others",others)
 
       const OnAll = () => {
+          items.value = allItems
           web.value = false
           experiments.value = false
           others.value = false
@@ -73,6 +74,7 @@ export default {
             all.value = true
       }
       const OnWeb = () => {
+        items.value = allItems.filter(item => item.odd == "web")
           web.value = !web.value
           experiments.value = false
           others.value = false
@@ -81,6 +83,7 @@ export default {
             web.value = true
       }
       const OnExperiments = () => {
+        items.value = allItems.filter(item => item.odd == "experiments")
           web.value = false
           experiments.value = !experiments.value
           others.value = false
@@ -89,6 +92,7 @@ export default {
             experiments.value = true
       }
       const OnOthers = () => {
+        items.value = allItems.filter(item => item.odd == "others")
           web.value = false
           experiments.value = false
           others.value = !others.value
@@ -96,6 +100,50 @@ export default {
           if(web.value == others.value);
             others.value = true
       }
+
+      const allItems=[
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/830840618590142534/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f363238393635353537.png?width=527&height=382",
+              title:"TODO APP VUE3 JS",
+              link:"https://github.com/JCruzMi/ToDoApp",
+              odd:"experiments"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/830841420859310120/emotes.png?width=525&height=525",
+              title:"Bot Discord Medi",
+              link:"https://github.com/JCruzMi/BotDiscordMedi",
+              odd:"others"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/870041535276797982/unknown.png?width=644&height=656",
+              title:"PokeApi",
+              link:"https://github.com/JCruzMi/poke-api-vue",
+              odd:"web"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/830844969111126026/unknown.png?width=531&height=390",
+              title:"CovidApp",
+              link:"https://covidreporter.netlify.app",
+              odd:"web"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/830845646168653854/udkmMedi.png?width=531&height=531",
+              title:"Dibujos",
+              link:"https://www.instagram.com/huanmurato/",
+              odd:"others"
+          },
+          {
+              src:"https://camo.githubusercontent.com/3e0049fcab9abd60908f121364de119997df47b692538586ab01ce4d6209e7a2/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3830393930333532343436333930323735322f3835313533353738373837373939303438302f756e6b6e6f776e2e706e673f77696474683d363235266865696768743d343533",
+              title:"ChatBox Streamlabs",
+              link:"https://github.com/JCruzMi/TwitchStremlabs/tree/master/AvatarChatBox",
+              odd:"experiments"
+          },
+      ]
+
+      const items = ref(allItems)
+
+      provide("items",items)
+
 
       return {
         all, 

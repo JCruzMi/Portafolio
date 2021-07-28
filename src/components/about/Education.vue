@@ -10,7 +10,7 @@
             <h3>{{item.nombre}}</h3>
             <h4>{{item.compa}}</h4>
             <p>{{item.desc}}</p>                  
-            <a v-if="item.link!=' '" :href="item.link">ver</a>
+            <a v-if="item.link!=' '" :href="item.link">Ver Certificados</a>
           </div>
         </div>
       </div>
@@ -25,8 +25,18 @@ export default {
 
     return {
       items: [
-        {fecha:"2016-2021", nombre:"Ingenieria en Sistemas", compa:"Universidad EAN", desc:"Titulo otorgado por haber culminado estudios en la carrera Ingenieria de Sistemas en la Universidad EAN.",link:" "},
-        {fecha:"2021", nombre:"Certificados", compa:"Platzi/otros", desc:"Certificados expedidos por Platzi",link:"https://drive.google.com/drive/u/1/folders/1VMreXK2ZVPBX1-OPhBxI3Jp7E1LkeELq"},
+        {
+          fecha: "2016-2021", 
+          nombre: "Ingenieria en Sistemas",
+          compa: "Universidad EAN", 
+          desc: "Titulo otorgado por haber culminado estudios en la carrera Ingenieria de Sistemas en la Universidad EAN.",link:" "
+        },
+        {
+          fecha: "2021", 
+          nombre: "Certificados", 
+          compa: "Platzi/Otros", 
+          desc: "Certificados expedidos por Platzi",link:"https://drive.google.com/drive/u/1/folders/1VMreXK2ZVPBX1-OPhBxI3Jp7E1LkeELq"
+        },
       ]
     }
     // Realizar guardado de todo el recorrido y mandarlo a la vista

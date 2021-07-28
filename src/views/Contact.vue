@@ -16,31 +16,17 @@
       <!-- Form -->
       <div class="row">
         <div class="contact-form">
-          <form>
-            <div class="row">
-              <div class="w-50">
-                <div class="input-group outer-shadow hover-in-shadow">
-                  <input v-model="msName" type="text" placeholder="Name" class="input-control">
-                </div>
-                <div class="input-group outer-shadow hover-in-shadow">
-                  <input v-model="msEmail" type="text" placeholder="Email" class="input-control">
-                </div>
-                <div class="input-group outer-shadow hover-in-shadow">
-                  <input v-model="msSubject" type="text" placeholder="Subject" class="input-control">
-                </div>
-              </div>
-              <div class="w-50">
-                <div class="input-group outer-shadow hover-in-shadow">
-                  <textarea v-model="msMessage" class="input-control" placeholder="Message">
-                  </textarea>
-                </div>
-              </div>
-            </div>
+          <form @submit.prevent>
             <div class="row">
               <div class="submit-btn">
-                <button type="submit" class="btn-1 outer-shadow hover-in-shadow">
-                   Send Message <i class="fas fa-paper-plane"></i>
-                </button>
+                <a 
+                  href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHvpGRJSDTQVbwCZXmbChdNRdSjTjBqMjTmWRzncbRgbwKhSQQbPrLrPHgKmNSnGFmcdwxF" 
+                >
+                  <button
+                    class="btn-1 outer-shadow hover-in-shadow">
+                    Send Message Gmail <i class="fas fa-paper-plane"></i>
+                  </button>
+                </a>
               </div>
             </div>
           </form>
@@ -66,9 +52,9 @@ export default {
   setup(){
     return{
       items : [
-        {icon:  "fas fa-phone", name: "Phone", text: "3184247598" },
+        {icon:  "fas fa-phone", name: "Phone", text: "+57 3184247598" },
         {icon:  "fas fa-envelope", name: "Email", text: "juan.murato.cruz@gmail.com" },
-        {icon:  "fas fa-map-marker-alt", name: "Addres", text: "Bogota" }
+        {icon:  "fas fa-map-marker-alt", name: "Addres", text: "Bogóta" }
       ]
     }
   }
@@ -99,6 +85,7 @@ export default {
   padding: 0 15px;
   flex: 0 0 50%;
   max-width: 50%;
+  
 }
 
 .contact-section .input-group{
@@ -134,6 +121,11 @@ export default {
   max-width: 100%;
   text-align: right;
   padding: 0 15px;
+}
+.contact-section .submit-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-section .submit-btn button{
   font-weight: 600;

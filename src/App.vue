@@ -39,6 +39,7 @@ export default {
   --bg-black-100: #ddd;
   --bg-black-50: #eff0f4;
   --text-black-900: #000;
+  --text-link : rgb(172, 80, 95);
   --text-black-600: rgb(141, 141, 141);
   --text-salmon-700: #FC6D6D;
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
@@ -52,6 +53,7 @@ body.dark{
   --bg-black-100: #353535;
   --bg-black-50: #2b2c2f;
   --text-black-900: #fff;
+  --text-link : rgb(209, 194, 196);
   --text-black-600: #bbb;
   --text-salmon-700: #FC6D6D;
   --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
@@ -87,8 +89,10 @@ body{
 ::before,::after{
   box-sizing: border-box;
 }
-a{
+a:link, a:visited, a:active {
   text-decoration: none;
+  color: var(--text-link);
+  font-weight: 600;
 }
 ul{
   list-style: none;

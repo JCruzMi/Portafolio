@@ -1,6 +1,10 @@
 <template>
     <div class="icon" v-if="icon">
-        <div class="oll"><a class="tool-tip outer-shadow hover-in-shadow" :href="link" target="_blank">{{name}}</a></div>
+        <div class="oll">
+            <a class="tool-tip outer-shadow hover-in-shadow" :href="link" target="_blank">
+                {{name}}
+            </a>
+        </div>
         <a :href="link" target="_blank" class="outer-shadow hover-in-shadow"><i :class="icon"></i></a>
     </div>
     <div class="icon" v-else>

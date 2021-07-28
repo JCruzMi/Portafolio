@@ -5,7 +5,7 @@
         <!-- duplicate timeline -->
         <div class="timeline-item" v-for="item in items" :key="item">
           <div class="timeline-item-inner outer-shadow">
-            <i class="fas fa-briefcase icon"></i>
+            <i class="fas fa-graduation-cap icon"></i>
             <span>{{item.fecha}}</span>
             <h3>{{item.nombre}}</h3>
             <h4>{{item.compa}}</h4>
@@ -24,9 +24,30 @@ export default {
 
     return{
       items:[
-        {fecha: "2018-2021", nombre: "MARATONES DE PROGRAMACIÓN", compa:"Universidad EAN", desc : "Participación en maratones internas, interuniversitarias y nacionles de programacion; Lider maratonista."},
-        {fecha: "2020-2020", nombre: "COVID-APP", compa:"Proyecto Universitario", desc : "Desarrollo de una aplicacion web de inicio a fin con Angular que hace seguimiento cada 5 minutos al Covid-19 mediante una API dada por una universidad."},
-        {fecha: "2021-2021", nombre: "EVENTOS SEMILLEROS", compa:"Proyecto Universidad EAN", desc : "Creación de mockups y desarrollo web frontend de una aplicacion web que permite crear eventos y ver eventos pasados."},
+        {
+          fecha: "2018-2021", 
+          nombre: "MARATONES DE PROGRAMACIÓN", 
+          compa: "Universidad EAN", 
+          desc : "Participación en maratones internas, universitarias y nacionles de programacion con lenguaje Python. Lider maratonista de la universidad EAN."
+        },
+        {
+          fecha: "2020-2020", 
+          nombre: "COVID-APP", 
+          compa: "Seminario de Investigación", 
+          desc : "Desarrollo de una aplicacion web de inicio a fin con Angular que hace seguimiento cada 5 minutos al Covid-19 mediante una API dada por una universidad."
+        },
+        {
+          fecha: "2021-2021", 
+          nombre: "PROYECTO PARA SEMILLEROS", 
+          compa: "Proyecto Universidad EAN", 
+          desc : "Desarrollo web frontend de una aplicacion que permite crear y editar eventos pasados de la universidad con VUE.js y Laravel como backend."
+        },
+        {
+          fecha: "2021-indefinido", 
+          nombre: "Buscando Trabajo", 
+          compa: "Buscando", 
+          desc : "En busqueda de trabajo."
+        },
       ]
     }
 
@@ -85,16 +106,13 @@ export default {
   width: 30px;
   height: 2px;
   background-color: var(--bg-black-100);
-  top: 37px;
+  margin-top: 10%;
 }
 /**Lina horizontal Intercalado */
-.timeline .timeline-item:nth-child(odd) .timeline-item-inner:before{
+.timeline .timeline-item .timeline-item-inner:before{
   left: -30px;
 }
 
-.timeline .timeline-item:nth-child(even) .timeline-item-inner:before{
-  left: -30px;
-}
 /**Fin Lina horizontal al lado del icono */
 /**Fin Lina horizontal al lado del icono */
 
@@ -113,13 +131,12 @@ export default {
   background-color: var(--bg-black-50);
 }
 /** Icono Intercalado */
-.timeline .timeline-item:nth-child(odd) .icon{
+.timeline .timeline-item .icon{
   left: -70px;
+  margin-top: 10%;
 }
 
-.timeline .timeline-item:nth-child(even) .icon{
-  left: -70px;
-}
+
 /**Fin Icono Intercalado */
 /**Fin Icono */
 

@@ -1,15 +1,14 @@
 <template>
 
   <div class="portafolio-item" v-for="item in items" :key="item">
-      <div class="portafolio-item-inner outer-shadow" v-if="others && item.others || alls || webs && item.web || experiments && item.experiments">
+      <div class="portafolio-item-inner outer-shadow">
           <div class="portafolio-item-img">
             <img :src="item.src">
           </div>
           <p class="portafolio-item-tittle">{{item.title}}</p>
           <!-- Btn project view -->
           <a  target="_blank" :href="item.link"><span class="btn-1 outer-shadow hover-in-shadow view-project">View Project</span></a>
-      </div>
-      
+      </div>      
   </div>
 </template>
 
@@ -19,20 +18,13 @@ import { inject } from 'vue'
 
 export default {
     setup(){
-        const alls = inject("alls")
-        const others = inject("others")
-        const webs = inject("webs")
-        const experiments = inject("experiments")
+        
+        
+
+        const items= inject("items")
 
         return{
-            items:[
-                {src:"https://media.discordapp.net/attachments/804511906735718421/830840618590142534/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f363238393635353537.png?width=527&height=382",title:"TODO APP VUE JS 3",link:"https://github.com/JCruzMi/ToDoApp",experiments:true,web:false,others:false},
-                {src:"https://media.discordapp.net/attachments/804511906735718421/830841420859310120/emotes.png?width=525&height=525",title:"Bot Discord Medi",link:"https://github.com/JCruzMi/MusicBot",experiments:false,web:false,others:true},
-                {src:"https://media.discordapp.net/attachments/804511906735718421/830841629229318224/unknown.png?width=525&height=409",title:"PokeApi",link:"https://github.com/JCruzMi/poke-api-vue",experiments:true,web:true,others:false},
-                {src:"https://media.discordapp.net/attachments/804511906735718421/830844969111126026/unknown.png?width=531&height=390",title:"CovidApp",link:"https://covidreporter.netlify.app",experiments:false,web:true,others:false},
-                {src:"https://media.discordapp.net/attachments/804511906735718421/830845646168653854/udkmMedi.png?width=531&height=531",title:"Dibujos",link:"https://www.instagram.com/huanmurato/",experiments:false,web:false,others:true},
-            
-            ],alls,others,webs,experiments
+            items
         }
 
 
@@ -46,6 +38,7 @@ export default {
 .portafolio-item{
     flex:0 0 33.33%;
     max-width: 33.33%;
+    min-width: 33.33%;
     padding: 15px;;
     display: flex;
     flex-wrap: wrap;
@@ -56,12 +49,21 @@ export default {
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 400px;
+}
+
+.portafolio-item .portafolio-item-img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .portafolio-item .portafolio-item-img img{
     border-radius: 5px;
-    width: 100%;
+    width: auto;
+    height: 180px;
+    min-height: 150px;
+    max-height: 200px;
     transition: all 0.3s ease;
 }
 
@@ -73,8 +75,8 @@ export default {
 }
 
 .portafolio-item .portafolio-item-inner span{
-    margin-left: 25%;
     
+    margin-top: 10px;
 }
 
 .portafolio-item .portafolio-item-inner:hover .view-project{
@@ -94,7 +96,24 @@ export default {
     animation-iteration-count: 0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 780px) {
+  .portafolio-item{
+    flex:0 0 50%;
+    max-width: 50%;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portafolio-item .portafolio-item-inner{
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 650px) {
   .portafolio-item{
     flex:0 0 100%;
     max-width: 100%;

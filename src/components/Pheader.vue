@@ -8,7 +8,7 @@
       <li><span>Developer</span></li>
       <li><span>Freelancer</span></li>
     </ul>
-    <a href="#Labout" class="found btn-1 outer-shadow hover-in-shadow">About Me</a>
+    <router-link class="found btn-1 outer-shadow hover-in-shadow" to="/about">About Me</router-link>
   </div>
 </template>
 
@@ -97,6 +97,16 @@ export default {
   }
   .dynamic-txts li{
     font-size: 40px;
+  }
+}
+
+@media(max-width: 380px){
+  .wrapper .static-txt{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .dynamic-txts li span::after{
+    top: 4px;
   }
 }
 

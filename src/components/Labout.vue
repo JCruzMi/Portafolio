@@ -21,11 +21,13 @@
               <!-- social links end-->
           </div>
           <div class="about-info" id="about-info">
-              <p><span>Hola! mi nombre es Juan David</span> soy un egresado de la universidad EAN con titulo en ingenieria en sistemas, he desarrolaldo varios cursos dentro de mi
-              ambito laboral y fuera de ellos.
+              <p><span>Hola! mucho gusto
+                <br>Mi nombre es Juan David Cruz.</span><br>
+              Soy graduado de Ingenieria en Sistemas de la universidad EAN <i class="fas fa-user-graduate"></i>, 
+              Amante del anime, videojuegos <i class="fas fa-gamepad"></i> y los gatitos <i class="fas fa-paw"></i>.
               </p>
-              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programacion, dibujar y jugar diveojuegos</p>
-              <router-link class="btn-1 outer-shadow hover-in-shadow" to="/About">More About Me</router-link>
+              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programación <i class="fas fa-laptop-code"></i>, dibujar <i class="fas fa-pen"></i> y aprender idiosmás por cuenta propia <i class="fas fa-language"></i>.</p>
+              <p>He participado en varias maratones nacionales y participe en la maratón Regional de 2020 aplazada al 2021.</p>
               <router-link to="/Contact" class="btn-1 outer-shadow hover-in-shadow">Contact</router-link>
           </div>
       </div>
@@ -85,6 +87,10 @@ export default {
     line-height: 26px;
     margin-bottom: 15px;
     color: var(--text-black-600)
+}
+
+.about-section .about-info i{
+  color: var(--text-salmon-700);
 }
 
 .about-section .about-info span{

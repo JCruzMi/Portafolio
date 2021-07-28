@@ -77,11 +77,33 @@ export default {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .home-section .home-img .img-box img{
+    width: 100%;
+  }
+  .home-section .home-img .img-box{
+    width: 70%;
+ 
+  }
   .home-section .home-text{
     order: 2;
   }
   .home-section .home-text{
     text-align: center;
+  }
+  .effect-wrap .effect-2{
+    margin-left: -20%;
+    margin-top: 15%;
+  }
+  .effect-wrap .effect-1{
+    margin-top: 20%;
+    margin-right: -20%;
+  }
+}
+
+@media(max-width: 1460px){
+  .effect-wrap .effect-2{
+    margin-left: -20%;
+    margin-top: -15%;
   }
 }
 

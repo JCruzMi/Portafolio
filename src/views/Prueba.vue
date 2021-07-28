@@ -3,7 +3,7 @@
         <CardFluid></CardFluid>
     </section>
     <section>
-        <Gooey></Gooey>
+        <Naty></Naty>
     </section>
     
 </template>
@@ -11,10 +11,10 @@
 <script>
 
 import CardFluid from "../components/pruebas/CardFluid.vue"
-import Gooey from "../components/pruebas/Gooey.vue"
+import Naty from "./Naty.vue"
 
 export default {
-  components: { CardFluid, Gooey },
+  components: { CardFluid, Naty },
 
 }
 </script>

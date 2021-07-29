@@ -26,7 +26,7 @@
               Soy graduado de Ingenieria en Sistemas de la universidad EAN <i class="fas fa-user-graduate"></i>, 
               Amante del anime, videojuegos <i class="fas fa-gamepad"></i> y los gatitos <i class="fas fa-paw"></i>.
               </p>
-              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programación <i class="fas fa-laptop-code"></i>, dibujar <i class="fas fa-pen"></i> y aprender idiosmás por cuenta propia <i class="fas fa-language"></i>.</p>
+              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programación <i class="fas fa-laptop-code"></i>, dibujar <i class="fas fa-pen"></i> y aprender idiomas por cuenta propia <i class="fas fa-language"></i>.</p>
               <p>He participado en varias maratones nacionales y participe en la maratón Regional de 2020 aplazada al 2021.</p>
               <router-link to="/Contact" class="btn-1 outer-shadow hover-in-shadow">Contact</router-link>
           </div>

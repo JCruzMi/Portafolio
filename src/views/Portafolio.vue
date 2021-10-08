@@ -138,6 +138,18 @@ export default {
               link:"https://github.com/JCruzMi/TwitchStremlabs/tree/master/AvatarChatBox",
               odd:"experiments"
           },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/896117571319922688/unknown.png?width=558&height=656",
+              title:"ToDo React",
+              link:"https://github.com/JCruzMi/ToDoReact",
+              odd:"experiments"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/896117467712196678/unknown.png?width=494&height=656",
+              title:"Calendario React",
+              link:"https://github.com/JCruzMi/CalenderReact",
+              odd:"experiments"
+          },
       ]
 
       const items = ref(allItems)

@@ -8,28 +8,28 @@
         </div>
 
         <div class="grid">
-            <button class="AC res" @click="clickAc()">AC</button>
-            <button class="res resl" @click="clickDEL()">DEL</button>
-            <button class="simbol" @click="click('/')">/</button>
+            <button class="AC simbol outer-shadow hover-in-shadow" @click="clickAc()">AC</button>
+            <button class="simbol resl outer-shadow hover-in-shadow" @click="clickDEL()">DEL</button>
+            <button class="simbol outer-shadow hover-in-shadow" @click="click('/')">/</button>
 
-            <button class="" @click="click('7')">7</button>
-            <button class="" @click="click('8')">8</button>
-            <button class="" @click="click('9')">9</button>
-            <button class="simbol" @click="click('x')">x</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('7')">7</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('8')">8</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('9')">9</button>
+            <button class="simbol outer-shadow hover-in-shadow" @click="click('x')">x</button>
 
-            <button class="" @click="click('4')">4</button>
-            <button class="" @click="click('5')">5</button>
-            <button class="" @click="click('6')">6</button>
-            <button class="simbol" @click="click('-')">-</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('4')">4</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('5')">5</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('6')">6</button>
+            <button class="simbol outer-shadow hover-in-shadow" @click="click('-')">-</button>
 
-            <button class="" @click="click('1')">1</button>
-            <button class="" @click="click('2')">2</button>
-            <button class="" @click="click('3')">3</button>
-            <button class="simbol" @click="click('+')">+</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('1')">1</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('2')">2</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('3')">3</button>
+            <button class="simbol outer-shadow hover-in-shadow" @click="click('+')">+</button>
 
-            <button class="AC" @click="click('0')">0</button>
-            <button class="" @click="click('.')">.</button>
-            <button class="result" @click="clickResult()">=</button>
+            <button class="AC outer-shadow hover-in-shadow" @click="click('0')">0</button>
+            <button class="outer-shadow hover-in-shadow" @click="click('.')">.</button>
+            <button class="simbol outer-shadow hover-in-shadow" @click="clickResult()">=</button>
             
 
         </div>
@@ -99,9 +99,10 @@
 .data{
     text-align: right;
     padding: 1rem 1rem;
-    background-color: #181f32;
+    background-color: var(--bg-black-900);
     border-radius: 0.5rem;
-    color: var(--bg-black-900);
+    color: var(--bg-black-100);
+    margin: 1rem;
 }
 
 .data .valor{
@@ -122,7 +123,7 @@
     padding: 1rem;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: #242d43;
+    background-color: var(--bg-black-50);
     grid-gap: 1rem;
 }
 
@@ -133,33 +134,26 @@ button {
     height: 3rem;
     color: var(--text-salmon-700);
     font-weight: 600;
-    background-color: #e9e3dc;
+    background-color: var(--bg-black-50);
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 1px #181f32;
 }
+
+button:after {
+    border-radius: 10px;
+}
+
 
 .AC{
     grid-column: 1 / 3;
 }
 
-.result{
-    background-color: #d23e31;
-    color: white;
-}
-
-.res{
-    background-color: #647298;
-    color: white;
-    font-size: 18px;
-}
 
 .resl{
     font-size: 14px;
 }
 
 .simbol{
-    background-color: #3b4664;
-    color: white;
+    color: var(--bg-black-900);
 }
 
 @media (max-width: 760px) {

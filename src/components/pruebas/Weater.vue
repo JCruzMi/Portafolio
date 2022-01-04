@@ -40,13 +40,12 @@
 
 <script>
 
-import { computed, watchEffect } from 'vue'
+import { computed, watchEffect, ref } from 'vue'
 import { useGeolocation } from '../../logic/useGeolocation'
 
 export default {
     setup(){
         
-
         const { coords } = useGeolocation()
         const currPos = computed (() => ({
             lat: coords.value.latitude,

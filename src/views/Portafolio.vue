@@ -150,6 +150,18 @@ export default {
               link:"https://github.com/JCruzMi/CalenderReact",
               odd:"experiments"
           },
+          {
+              src:"https://camo.githubusercontent.com/174506a30f99a63a7bf994bd0811ab7fa3362bc8d35915b73683fb1c9dc8a4dd/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3830393930333532343436333930323735322f3932333938363932323632363438363337322f756e6b6e6f776e2e706e673f77696474683d373638266865696768743d333939",
+              title:"Pokedex Vue/Serverless",
+              link:"https://github.com/JCruzMi/vue-vite-pokedex-api",
+              odd:"web"
+          },
+          {
+              src:"https://media.discordapp.net/attachments/905980314990567434/927736065735938048/unknown.png?width=622&height=681",
+              title:"Calculadora",
+              link:"https://huan-portafolio.netlify.app/prueba",
+              odd:"web"
+          },
       ]
 
       const items = ref(allItems)

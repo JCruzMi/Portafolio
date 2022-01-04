@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 /**Light mode */
 :root{
   --bg-black-900: #000;
@@ -78,6 +79,7 @@ body{
   line-height: 1.5;
   overflow-x: hidden;
   background-color: var(--bg-black-50);
+  font-family: 'Spartan', sans-serif;
 }
 
 *{

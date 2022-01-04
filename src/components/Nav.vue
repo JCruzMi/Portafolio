@@ -1,6 +1,6 @@
 <template>
   <div class="nav-menu" id="nav">
-    <div class="close-nav-menu outer-shadow hover-in-shadow" @click="onMenuClick()">&times;</div>
+    <div class="close-nav-menu outer-shadow hover-in-shadow" @click="onMenuClick()">x</div>
     <div class="nav-menu-inner">
         <ul>
             <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/">Home</router-link></li>

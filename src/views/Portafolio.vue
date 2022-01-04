@@ -157,11 +157,17 @@ export default {
               odd:"web"
           },
           {
-              src:"https://media.discordapp.net/attachments/905980314990567434/927736065735938048/unknown.png?width=622&height=681",
+              src:"https://media.discordapp.net/attachments/804511906735718421/927944417640321134/unknown.png?width=630&height=673",
               title:"Calculadora",
               link:"/prueba",
               odd:"web"
           },
+          {
+              src:"https://media.discordapp.net/attachments/804511906735718421/927944932264648754/unknown.png?width=683&height=672",
+              title:"Clima",
+              link:"/prueba",
+              odd:"web"
+          }
       ]
 
       const items = ref(allItems)

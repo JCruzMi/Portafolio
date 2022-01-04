@@ -10,17 +10,17 @@ const routes = [
   {
     path: '/portafolio',
     name: 'Portafolio',
-    component: () => import(/* webpackChunkName: "portafolio" */ '../views/Portafolio.vue')
+    component: () => import('../views/Portafolio.vue')
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+    component: () => import('../views/Contact.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/About.vue')
   },
   {
     path: '/skills',
@@ -32,11 +32,9 @@ const routes = [
     name: 'Prueba',
     component: () => import('../views/Prueba.vue')
   },
-  {
-    path: '/naty',
-    name: 'Naty',
-    component: () => import('../views/Naty.vue')
-  }
+  { path: '/:pathMatch(.*)*', 
+    component:() => import('../views/404.vue')
+  },
 ]
 
 const router = createRouter({

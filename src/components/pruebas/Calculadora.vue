@@ -2,9 +2,9 @@
     <div class="container">
         <div class="calculadora">
         
-        <div class="data">
+        <div class="data inner-shadow">
             <p class="valor">{{getOperation.toString()}}</p>
-            <p class="vista">{{getResult.toString().substring(getResult.length-9, getResult.length)}}</p>
+            <p class="vista">{{getResult.toString().substring(getResult.length-8, getResult.length)}}</p>
         </div>
 
         <div class="grid">
@@ -44,7 +44,7 @@
 
     const data = 0
 
-    const getOperation = ref(0)
+    const getOperation = ref("")
     const getResult = ref(0)
 
 
@@ -99,20 +99,20 @@
 .data{
     text-align: right;
     padding: 1rem 1rem;
-    background-color: var(--bg-black-900);
+    background-color: var(--bg-black-50);
     border-radius: 0.5rem;
-    color: var(--bg-black-100);
+    color: var(--bg-black-900);
     margin: 1rem;
 }
 
 .data .valor{
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 600;
     word-wrap: break-word;
 }
 
 .data .vista{
-    font-size: 6vw;
+    font-size: 4vw;
     font-weight: bold;
     word-wrap: break-word;
 }

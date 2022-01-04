@@ -32,7 +32,7 @@ const routes = [
     name: 'Prueba',
     component: () => import('../views/Prueba.vue')
   },
-  { path: '/*', 
+  { path: '/:pathMatch(.*)*', 
     component:() => import('../views/404.vue')
   },
 ]

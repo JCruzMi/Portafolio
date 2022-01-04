@@ -96,7 +96,6 @@
     height: auto;
     width: 45%;
     font-family: 'Spartan', sans-serif;
-    
 }
 
 .data{
@@ -163,6 +162,18 @@ button {
 .simbol{
     background-color: #3b4664;
     color: white;
+}
+
+@media (max-width: 760px) {
+    .calculadora{
+        width: 80%;
+    }
+}
+
+@media (max-width: 440px) {
+    .calculadora{
+        width: 90%;
+    }
 }
 
 </style>

@@ -160,7 +160,7 @@ export default {
 }
 
 .weather .wrap #temperature{
-    font-size: 9vw;
+    font-size: 8vw;
     font-weight: 900;
     margin: .5rem 0px;
     text-shadow: 1px 1px 0 var(--text-black-600),
@@ -169,8 +169,7 @@ export default {
     4px 4px 0 var(--text-black-600),
     5px 5px 0 var(--text-black-600),
     6px 6px 0 var(--text-black-600),
-    1px 1px 0 rgba(0, 0, 0, 0.1)
-    ;    
+    1px 1px 0 rgba(0, 0, 0, 0.1);    
 }
 
 .weather .wrap #desc{
@@ -181,8 +180,8 @@ export default {
 .weather .wrap .hi-low{
     font-size: 24px;
     font-weight: 500;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
     width: 90%;
     margin-top: 1rem;
@@ -223,6 +222,29 @@ export default {
     padding: 0.5rem 1rem;
 }
 
+@media (max-width: 1200px) {
+    .weather .wrap .hi-low{
+        justify-content: center;
 
+    }
+
+    .weather .wrap .hi-low .box1{
+        grid-column: 1 / 2;
+        width: 100%;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .weather{
+
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 550px) {
+
+}
 
 </style>

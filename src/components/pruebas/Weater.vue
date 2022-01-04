@@ -57,7 +57,7 @@ export default {
 
         const getData = () =>{
             if (currPos.value.lat != 0){
-                fetch("http://api.openweathermap.org/data/2.5/weather?units=metric&lat="+currPos.value.lat+"&lon="+currPos.value.lng+"&appid="+API_KEY)
+                fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&lat="+currPos.value.lat+"&lon="+currPos.value.lng+"&appid="+API_KEY)
                 .then(response=> response.json())
                 .then(data => setWeatherData(data))
             }
@@ -80,7 +80,7 @@ export default {
             Object.keys(weatherData).forEach( key => {
                 document.getElementById(key).textContent = weatherData[key]
             })
-            pic("http://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png",)
+            pic("https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png",)
         }
 
         const getDate = () =>{
@@ -222,6 +222,7 @@ export default {
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding: 0.5rem 1rem;
 }
+
 
 
 </style>

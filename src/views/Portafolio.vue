@@ -159,7 +159,7 @@ export default {
           {
               src:"https://media.discordapp.net/attachments/905980314990567434/927736065735938048/unknown.png?width=622&height=681",
               title:"Calculadora",
-              link:"https://huan-portafolio.netlify.app/prueba",
+              link:"/prueba",
               odd:"web"
           },
       ]

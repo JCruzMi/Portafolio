@@ -46,7 +46,7 @@ export default {
           fecha: "2021-indefinido", 
           nombre: "Buscando Trabajo", 
           compa: "Buscando", 
-          desc : "En busqueda de trabajo."
+          desc : "En búsqueda de trabajo."
         },
       ]
     }

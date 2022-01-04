@@ -3,8 +3,8 @@
         <div class="calculadora">
         
         <div class="data">
-            <p class="valor">{{getOperation}}</p>
-            <p class="vista">{{getResult}}</p>
+            <p class="valor">{{getOperation.toString()}}</p>
+            <p class="vista">{{getResult.toString().substring(getResult.length-9, getResult.length)}}</p>
         </div>
 
         <div class="grid">
@@ -44,7 +44,7 @@
 
     const data = 0
 
-    const getOperation = ref("")
+    const getOperation = ref(0)
     const getResult = ref(0)
 
 
@@ -110,12 +110,13 @@
 .data .valor{
     font-size: 25px;
     font-weight: 600;
+    word-wrap: break-word;
 }
 
 .data .vista{
     font-size: 55px;
     font-weight: bold;
-
+    word-wrap: break-word;
 }
 
 .grid{

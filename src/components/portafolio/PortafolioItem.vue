@@ -7,7 +7,7 @@
           </div>
           <p class="portafolio-item-tittle">{{item.title}}</p>
           <!-- Btn project view -->
-          <a  target="_blank" :href="item.link"><span class="btn-1 outer-shadow hover-in-shadow view-project">View Project</span></a>
+          <a target="_blank" :href="item.link"><span class="btn-1 outer-shadow hover-in-shadow view-project">View Project</span></a>
       </div>      
   </div>
 </template>

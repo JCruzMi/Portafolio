@@ -29,7 +29,7 @@ export default {
           fecha: "2016-2021", 
           nombre: "Ingenieria en Sistemas",
           compa: "Universidad EAN", 
-          desc: "Titulo otorgado por haber culminado estudios en la carrera Ingenieria de Sistemas en la Universidad EAN.",link:"https://portal.etitulo.com/visor.aspx?o=p&id=a5CJx"
+          desc: "Titulo otorgado por haber culminado estudios en la carrera Ingenieria de Sistemas en la Universidad EAN.",link:" "
         },
         {
           fecha: "2021", 

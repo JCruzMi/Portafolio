@@ -8,31 +8,31 @@ const routes = [
     component: Home
   },
   {
-    path: 'https://huan-portafolio.netlify.app/portafolio',
+    path: 'huan-portafolio.netlify.app/portafolio',
     name: 'Portafolio',
     component: () => import('../views/Portafolio.vue')
   },
   {
-    path: 'https://huan-portafolio.netlify.app/contact',
+    path: 'huan-portafolio.netlify.app/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
   {
-    path: 'https://huan-portafolio.netlify.app/about',
+    path: 'huan-portafolio.netlify.app/about',
     name: 'About',
     component: () => import('../views/About.vue')
   },
   {
-    path: 'https://huan-portafolio.netlify.app/skills',
+    path: 'huan-portafolio.netlify.app/skills',
     name: 'Skills',
     component: () => import('../views/Skills.vue')
   },
   {
-    path: 'https://huan-portafolio.netlify.app/prueba',
+    path: 'huan-portafolio.netlify.app/prueba',
     name: 'Prueba',
     component: () => import('../views/Prueba.vue')
   },
-  { path: 'https://huan-portafolio.netlify.app/:pathMatch(.*)*', 
+  { path: 'huan-portafolio.netlify.app/:pathMatch(.*)*', 
     component:() => import('../views/404.vue')
   },
 ]

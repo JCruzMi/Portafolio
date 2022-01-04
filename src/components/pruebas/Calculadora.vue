@@ -1,0 +1,167 @@
+<template>
+    <div class="container">
+        <div class="calculadora">
+        
+        <div class="data">
+            <p class="valor">{{getOperation}}</p>
+            <p class="vista">{{getResult}}</p>
+        </div>
+
+        <div class="grid">
+            <button class="AC res" @click="clickAc()">AC</button>
+            <button class="res resl" @click="clickDEL()">DEL</button>
+            <button class="simbol" @click="click('/')">/</button>
+
+            <button class="" @click="click('7')">7</button>
+            <button class="" @click="click('8')">8</button>
+            <button class="" @click="click('9')">9</button>
+            <button class="simbol" @click="click('x')">x</button>
+
+            <button class="" @click="click('4')">4</button>
+            <button class="" @click="click('5')">5</button>
+            <button class="" @click="click('6')">6</button>
+            <button class="simbol" @click="click('-')">-</button>
+
+            <button class="" @click="click('1')">1</button>
+            <button class="" @click="click('2')">2</button>
+            <button class="" @click="click('3')">3</button>
+            <button class="simbol" @click="click('+')">+</button>
+
+            <button class="AC" @click="click('0')">0</button>
+            <button class="" @click="click('.')">.</button>
+            <button class="result" @click="clickResult()">=</button>
+            
+
+        </div>
+
+    </div>
+    </div>
+</template>
+
+<script setup>
+
+    import { ref } from 'vue'
+
+    const data = 0
+
+    const getOperation = ref("")
+    const getResult = ref(0)
+
+
+    function click(par){
+        if(getResult.value == "0"){
+            getResult.value = par
+        } else {
+            getResult.value += par
+        }
+    }
+
+    function clickAc(){
+        getResult.value = "0"
+        getOperation.value = ""
+    }
+
+    function clickDEL(){
+        if(getResult.value.length > 1){
+            getResult.value = getResult.value.substring(0, getResult.value.length - 1)
+        } else {
+            getResult.value = "0"
+        }
+    }
+
+    function clickResult(){
+        let operation = getResult.value
+        getOperation.value = operation
+        operation = operation.replace("x", "*")
+
+        getResult.value = eval(operation)
+
+    }
+
+</script>
+
+<style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.calculadora{
+    height: auto;
+    width: 45%;
+    font-family: 'Spartan', sans-serif;
+    
+}
+
+.data{
+    text-align: right;
+    padding: 1rem 1rem;
+    background-color: #181f32;
+    border-radius: 0.5rem;
+    color: var(--bg-black-900);
+}
+
+.data .valor{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.data .vista{
+    font-size: 55px;
+    font-weight: bold;
+
+}
+
+.grid{
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #242d43;
+    grid-gap: 1rem;
+}
+
+button {
+    border: 0px;
+    font-size: 1.7rem;
+    line-height: 1.75rem;
+    height: 4rem;
+    color: var(--text-salmon-700);
+    font-weight: 600;
+    background-color: #e9e3dc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px #181f32;
+}
+
+.AC{
+    grid-column: 1 / 3;
+}
+
+.result{
+    background-color: #d23e31;
+    color: white;
+}
+
+.res{
+    background-color: #647298;
+    color: white;
+    font-size: 18px;
+}
+
+.resl{
+    font-size: 14px;
+}
+
+.simbol{
+    background-color: #3b4664;
+    color: white;
+}
+
+</style>

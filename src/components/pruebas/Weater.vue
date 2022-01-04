@@ -125,28 +125,25 @@ export default {
 .weather{
     margin: 0;
     padding: 0;
-    background-image: url("https://www.xtrafondos.com/descargar.php?id=5480&vertical=1");
-    background-size: cover;
-    background-position: top center;
-    width: 100%;
-    height: 100vh;
+    width: 45%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .weather .wrap{
     display: flex;
     flex-direction: column;
     width: 90%;
-    min-height: 400px;
+    max-height: 100%;
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(2.6px);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.5);
     border-right: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
     color: var(--bg-black-900);
@@ -164,10 +161,9 @@ export default {
 }
 
 .weather .wrap #temperature{
-    
     font-size: 9vw;
     font-weight: 900;
-    margin: 30px 0px;
+    margin: .5rem 0px;
     text-shadow: 1px 1px 0 var(--text-black-600),
     2px 2px 0 var(--text-black-600),
     3px 3px 0 var(--text-black-600),
@@ -188,7 +184,6 @@ export default {
     font-weight: 500;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     width: 90%;
     margin-top: 1rem;

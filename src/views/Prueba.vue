@@ -8,17 +8,21 @@
     <section>
         <Weater></Weater>
     </section>
+    <section>
+        <Calculadora></Calculadora>
+    </section>
 </template>
 
 <script>
 
 import CardFluid from "../components/pruebas/CardFluid.vue"
-import Naty from "./Naty.vue"
 import Gooey from "../components/pruebas/Gooey.vue"
 import Weater from "../components/pruebas/Weater.vue"
+import Calculadora from "../components/pruebas/Calculadora.vue"
+
 
 export default {
-  components: { CardFluid, Naty, Gooey, Weater },
+  components: { CardFluid, Gooey, Weater, Calculadora },
 
 }
 </script>
@@ -32,7 +36,6 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
 }
 
 

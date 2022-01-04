@@ -5,7 +5,7 @@
             <span id="country"></span>
             <span id="date"></span>
             <span id="temperature"></span>
-            <div class="box1">
+            <div class="box">
                 <span ><img id="img"></span>
                 <span id="desc"></span>
             </div>
@@ -125,7 +125,7 @@ export default {
     margin: 0;
     padding: 0;
     width: 45%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +149,7 @@ export default {
 }
 
 .weather .wrap #location{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 1rem;
@@ -162,7 +162,7 @@ export default {
 .weather .wrap #temperature{
     font-size: 8vw;
     font-weight: 900;
-    margin: .5rem 0px;
+    margin: 0.5rem 0px;
     text-shadow: 1px 1px 0 var(--text-black-600),
     2px 2px 0 var(--text-black-600),
     3px 3px 0 var(--text-black-600),
@@ -178,14 +178,12 @@ export default {
 }
 
 .weather .wrap .hi-low{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
     width: 90%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .weather .wrap .hi-low .box1:nth-child(1){
@@ -201,6 +199,16 @@ export default {
     font-size: 12px;
     padding-right: 3px;
 }
+
+.weather .wrap .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-top: -2rem;
+}
+
 
 .weather .wrap .box1{
     display: flex;
@@ -241,10 +249,15 @@ export default {
         width: 100%;
 
     }
+
+
 }
 
 @media (max-width: 550px) {
-
+    .weather .wrap .hi-low{
+        margin-top: 0rem;
+        margin-left: -2rem;
+    }
 }
 
 </style>

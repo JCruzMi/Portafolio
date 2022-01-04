@@ -82,20 +82,18 @@
 
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
 .container{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }   
 
 .calculadora{
-    height: auto;
+    max-height: 100vh;
     width: 45%;
-    font-family: 'Spartan', sans-serif;
 }
 
 .data{
@@ -107,13 +105,13 @@
 }
 
 .data .valor{
-    font-size: 25px;
+    font-size: 3vw;
     font-weight: 600;
     word-wrap: break-word;
 }
 
 .data .vista{
-    font-size: 55px;
+    font-size: 6vw;
     font-weight: bold;
     word-wrap: break-word;
 }
@@ -132,7 +130,7 @@ button {
     border: 0px;
     font-size: 1.7rem;
     line-height: 1.75rem;
-    height: 4rem;
+    height: 3rem;
     color: var(--text-salmon-700);
     font-weight: 600;
     background-color: #e9e3dc;

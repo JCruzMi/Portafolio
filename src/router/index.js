@@ -3,36 +3,36 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: 'https://huan-portafolio.netlify.app/',
+    path: '/',
     name: 'Home',
     component: Home
   },
   {
-    path: 'huan-portafolio.netlify.app/portafolio',
+    path: '/portafolio',
     name: 'Portafolio',
     component: () => import('../views/Portafolio.vue')
   },
   {
-    path: 'huan-portafolio.netlify.app/contact',
+    path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
   {
-    path: 'huan-portafolio.netlify.app/about',
+    path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
   },
   {
-    path: 'huan-portafolio.netlify.app/skills',
+    path: '/skills',
     name: 'Skills',
     component: () => import('../views/Skills.vue')
   },
   {
-    path: 'huan-portafolio.netlify.app/prueba',
+    path: '/prueba',
     name: 'Prueba',
     component: () => import('../views/Prueba.vue')
   },
-  { path: 'huan-portafolio.netlify.app/:pathMatch(.*)*', 
+  { path: '/:pathMatch(.*)*', 
     component:() => import('../views/404.vue')
   },
 ]

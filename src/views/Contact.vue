@@ -19,8 +19,8 @@
           <form @submit.prevent>
             <div class="row">
               <div class="submit-btn">
-                <a 
-                  href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHvpGRJSDTQVbwCZXmbChdNRdSjTjBqMjTmWRzncbRgbwKhSQQbPrLrPHgKmNSnGFmcdwxF" 
+                <a target="_blank"
+                  href="mailto:juan.murato.cruz@gmail.com?subject=subject"
                 >
                   <button
                     class="btn-1 outer-shadow hover-in-shadow">

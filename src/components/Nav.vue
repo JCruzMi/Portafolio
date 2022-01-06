@@ -3,9 +3,9 @@
     <div class="close-nav-menu outer-shadow hover-in-shadow" @click="onMenuClick()">x</div>
     <div class="nav-menu-inner">
         <ul>
-            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/">Home</router-link></li>
-            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/about">About</router-link></li>
-            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/skills">Skills</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/">Inicio</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/about">Sobre Mi</router-link></li>
+            <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/skills">Habilidades</router-link></li>
             <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/portafolio">Portafolio</router-link></li>
             <li @click="onMenuClick()"><router-link class="outer-shadow hover-in-shadow" to="/contact">Contacto</router-link></li>
         </ul>

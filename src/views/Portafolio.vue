@@ -167,6 +167,12 @@ export default {
               title:"Clima",
               link:"/prueba",
               odd:"web"
+          },
+          {
+            src:"https://media.discordapp.net/attachments/809903524463902752/961712995292049448/unknown.png?width=1136&height=591",
+            title:"Star Wars Api & NextJs",
+            link:"https://github.com/JCruzMi/start-wars",
+            odd:"web"
           }
       ]
 

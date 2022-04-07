@@ -106,6 +106,10 @@ img{
   max-width: 100%;
 }
 
+h1{
+  color: var(--bg-black-900);
+}
+
 .container{
   max-width: 1140px;
   margin: auto;

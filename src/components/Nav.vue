@@ -73,6 +73,7 @@ export default {
     display: block;
     margin-bottom: 20px;
     text-align: center;
+    color: var(--bg-black-900)
 }
 
 .nav-menu ul li:last-child{

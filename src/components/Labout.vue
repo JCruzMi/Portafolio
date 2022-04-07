@@ -15,7 +15,6 @@
               <div class="social-links">
                 <social :icon="'fab fa-instagram'" :name="'instagram'" :link="'https://www.instagram.com/huanmurato/'"></social>
                 <social :icon="'fab fa-linkedin-in'" :name="'linkedin'" :link="'https://www.linkedin.com/in/juan-david-cruz-huan/'"></social>
-                <social :icon="'fab fa-facebook-f'" :name="'facebook'" :link="'https://www.facebook.com/juandavid.cruzmiranda'"></social>
                 <social :icon="'fab fa-github'" :name="'github'" :link="'https://github.com/JCruzMi/'"></social>
               </div>
               <!-- social links end-->
@@ -24,10 +23,10 @@
               <p><span>Hola! mucho gusto
                 <br>Mi nombre es Juan David Cruz.</span><br>
               Soy graduado de Ingenieria en Sistemas de la universidad EAN <i class="fas fa-user-graduate"></i>, 
-              Amante del anime, videojuegos <i class="fas fa-gamepad"></i> y los gatitos <i class="fas fa-paw"></i>.
+              me gustan las series, peliculas de todo tipo, escuchar musica, los videojuegos <i class="fas fa-gamepad"></i> y los gatos <i class="fas fa-paw"></i>.
               </p>
-              <p>Entre mis pasatiempos estan el aprender nuevas cosas sobre programación <i class="fas fa-laptop-code"></i>, dibujar <i class="fas fa-pen"></i> y aprender idiomas por cuenta propia <i class="fas fa-language"></i>.</p>
-              <p>He participado en varias maratones nacionales y participe en la maratón Regional de 2020 aplazada al 2021.</p>
+              <p>Entre mis pasatiempos estan el aprender nuevas tecnologias con base en la programación para expandir mis conocimientos <i class="fas fa-laptop-code"></i>, dibujar <i class="fas fa-pen"></i> y aprender idiomas por cuenta propia <i class="fas fa-language"></i>.</p>
+              <p>He participado en varias maratones nacionales y participe en la maratón Regional de 2020 representando a la Universidad EAN.</p>
               <router-link to="/Contact" class="btn-1 outer-shadow hover-in-shadow">Contact</router-link>
           </div>
       </div>

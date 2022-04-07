@@ -106,7 +106,7 @@ img{
   max-width: 100%;
 }
 
-h1{
+h2{
   color: var(--bg-black-900);
 }
 

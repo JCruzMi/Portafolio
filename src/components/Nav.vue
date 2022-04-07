@@ -73,7 +73,6 @@ export default {
     display: block;
     margin-bottom: 20px;
     text-align: center;
-    color: var(--bg-black-900)
 }
 
 .nav-menu ul li:last-child{
@@ -83,7 +82,7 @@ export default {
     display: inline-block;
     font-size: 28px;
     font-weight: 600;
-    color: #000;
+    color: var(--bg-black-900);
     padding: 5px 30px;
 }
 

@@ -32,6 +32,11 @@ const routes = [
     name: 'Prueba',
     component: () => import('../views/Prueba.vue')
   },
+  {
+    path: '/chat-box',
+    name: 'ChatBox',
+    component: () => import('../views/ChatBox.vue')
+  },
   { path: '/:pathMatch(.*)*', 
     component:() => import('../views/404.vue')
   },

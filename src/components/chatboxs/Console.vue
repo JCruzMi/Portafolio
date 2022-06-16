@@ -1,14 +1,17 @@
 <template>
   <div id="log" class="sl__chat__layout">
-    <div data-from="ellisonfire" id="animation">
+    <div data-from="ellisonfire" id="animation" v-for="message in messages" :key="message">
       <div class="meta">
         <div class="animateName">
-          <div class="name">ellisonfire<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"
-              class="badge subscriber-icon"
-          /></span>
+          <div class="name">{{message.nameUser}}<span class="extra"></span></div>
+          <div v-if="message.badges.length > 0">
+            <span class="badges" v-for="bag in message.badges" :key="bag">
+              <img
+                :src="bag"
+                class="badge broadcaster-icon"
+              />
+            </span>
+          </div>
         </div>
         <div class="circles">
           <div class="circle circle-red"></div>
@@ -18,120 +21,39 @@
       </div>
       <div class="message">
         <div id="ca" class="container-message">
-          SimulationCraft and Pawn
-        </div>
-      </div>
-    </div>
-
-    <div data-from="Undeviginti19" id="animation">
-      <div class="meta">
-        <div class="animateName">
-          <div class="name">Undeviginti19<span class="extra"></span></div>
-          <span class="badges"></span>
-        </div>
-        <div class="circles">
-          <div class="circle circle-red"></div>
-          <div class="circle circle-yellow"></div>
-          <div class="circle circle-green"></div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          He can still win this one
-        </div>
-      </div>
-    </div>
-
-    <div data-from="moltenb" id="animation">
-      <div class="meta">
-        <div class="animateName">
-          <div class="name">moltenb<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1"
-              class="badge broadcaster-icon"
-          /></span>
-        </div>
-        <div class="circles">
-          <div class="circle circle-red"></div>
-          <div class="circle circle-yellow"></div>
-          <div class="circle circle-green"></div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          pog
-        </div>
-      </div>
-    </div>
-    <div data-from="locoroco0o" id="animation">
-      <div class="meta">
-        <div class="animateName">
-          <div class="name">locoroco0o<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1"
-              class="badge broadcaster-icon"
-          /></span>
-        </div>
-        <div class="circles">
-          <div class="circle circle-red"></div>
-          <div class="circle circle-yellow"></div>
-          <div class="circle circle-green"></div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          never lucky!
-        </div>
-      </div>
-    </div>
-    <div data-from="moltenb" id="animation">
-      <div class="meta">
-        <div class="animateName">
-          <div class="name">moltenb<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1"
-              class="badge broadcaster-icon"
-          /></span>
-        </div>
-        <div class="circles">
-          <div class="circle circle-red"></div>
-          <div class="circle circle-yellow"></div>
-          <div class="circle circle-green"></div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          pog
+         {{message.message}}
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+const props = defineProps({
+  messages: {
+    type: Object,
+  }
+})
+
+</script>
 
 <style scoped>
 #log {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 98%;
   bottom: 0;
-  top: 2rem;
   padding: 0 10px 10px;
 }
+
+#animation {
+  animation: bounceInUp 0.66s ease-in-out forwards;
+}
+
 #log > div {
   position: relative;
   padding-top: 21px;
   margin-bottom: 10px;
-}
-
-#animation {
-  position: relative;
-  padding-top: 21px;
-  margin-bottom: 10px;
-  animation: bounceInUp 0.66s ease-in-out forwards;
 }
 /* ===== name ===== */
 #log .meta {

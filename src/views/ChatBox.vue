@@ -16,9 +16,14 @@
       </div>
       <!-- Fin Items -->
       <div class="chat">
-        <Ryumi v-if="selected=='ryumi'" />
-        <Console v-if="selected=='console'" />
+        <Ryumi :messages="messages" v-if="selected=='ryumi'" />
+        <Console :messages="messages" v-if="selected=='console'" />
 
+      </div>
+      <div class="chat-wrapper">
+
+        <textarea v-model="message"></textarea>
+        <button class="btn btn-1 outer-shadow" @click="send">mandar</button>
       </div>
     </div>
   </div>
@@ -30,6 +35,32 @@ import Ryumi from '@/components/chatboxs/Ryumi'
 import Console from '@/components/chatboxs/Console'
 
 import { ref } from 'vue'
+
+const messages = ref([
+  {
+   nameUser: "test2",
+   userImg: "https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg",
+   message: "dsadsad asd asd asdas",
+   badges: ["https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"],
+   color: "blue" 
+  },
+  {
+   nameUser: "test1",
+   userImg: "https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg",
+   message: "a",
+   badges: ["https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1"],
+   color: "yellow" 
+  },
+  {
+   nameUser: "test3",
+   userImg: "https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg",
+   message: "aaaaaaaaa",
+   badges: ["https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"],
+   color: "red" 
+  }
+])
+
+const message = ref("")
 
 const list = [
     {
@@ -43,7 +74,22 @@ const list = [
 const selected = ref("")
 
 function select (name){
-    selected.value=name
+  selected.value=name
+}
+
+function send (){
+  if(message.value!=""){
+
+    const data = {
+      nameUser: "tu",
+    userImg: "https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg",
+    message: message.value,
+    badges: [],
+    color: "#000" 
+    }
+    messages.value.push(data)
+    message.value = ""
+  }
 }
 
 </script>
@@ -55,10 +101,10 @@ function select (name){
 }
 
 .chatbox{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
     
 }
 
@@ -77,6 +123,29 @@ function select (name){
     border-radius: 20px;
     background-color: var(--bg-black-100);
     overflow-y: hidden;
+    height: 600px;
+    position: relative;
+}
+
+.chat-wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+}
+
+textarea {
+  resize: none;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 41px;
+  width: 100%;
+  border: 1px solid #e4e7ec;
+  border-radius: 20px;
+  background-color: #f9fafb;
+  outline: none;
+  padding: 0 24px 0 24px;
+  overflow: hidden;
+  margin-right: 1rem;
 }
 
 </style>

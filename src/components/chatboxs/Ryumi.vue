@@ -1,14 +1,21 @@
 <template>
-  <div id="log">
-    <div id="animation">
+  <div id="log" >
+    <div id="animation" v-for="message in messages" :key="message">
       <div class="meta">
-        <div class="animateName" style="background-color:#FF0000">
-          <div class="name">Pini2911<span class="extra"></span></div>
-          <span class="badges"></span>
+        <div class="animateName" :style="{backgroundColor: message.color}">
+          <div class="name">{{message.nameUser}}<span class="extra"></span></div>
+          <div v-if="message.badges.length > 0">
+            <span class="badges" v-for="bag in message.badges" :key="bag">
+              <img
+                :src="bag"
+                class="badge broadcaster-icon"
+              />
+            </span>
+          </div>
           <div class="i profile">
             <img
               class="message-Pini2911-avatar avatar"
-              src="https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg"
+              :src="message.userImg"
               width="26"
               height="26"
               alt=""
@@ -18,191 +25,20 @@
       </div>
       <div class="message">
         <div id="ca" class="container-message">
-          <span
-            style="background: linear-gradient(90deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(180deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(270deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(360deg, transparent, #FF0000)"
-          ></span>
-          That move was POG
+          {{message.message}}
         </div>
       </div>
     </div>
-    <div id="animation">
-      <div class="meta">
-        <div class="animateName" style="background-color:#8A2BE2">
-          <div class="name">Z4NN1N<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"
-              class="badge subscriber-icon"/><img
-              src="https://static-cdn.jtvnw.net/badges/v1/bbbe0db0-a598-423e-86d0-f9fb98ca1933/1"
-              class="badge premium-icon"
-          /></span>
-
-          
-
-          <div class="i profile">
-            <img
-              class="message-Z4NN1N-avatar avatar"
-              src="https://static-cdn.jtvnw.net/jtv_user_pictures/1454c192-f53f-48e6-9104-ec817681408a-profile_image-300x300.png"
-              width="26"
-              height="26"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          <span
-            style="background: linear-gradient(90deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(180deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(270deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(360deg, transparent, #8A2BE2)"
-          ></span>
-          you always think that...
-        </div>
-      </div>
-    </div>
-    <div  id="animation">
-      <div class="meta">
-        <div class="animateName" style="background-color:#FF0000">
-          <div class="name">Stauswave<span class="extra"></span></div>
-          <span class="badges"></span>
-
-          
-
-          <div class="i profile">
-            <img
-              class="message-Stauswave-avatar avatar"
-              src="https://static-cdn.jtvnw.net/jtv_user_pictures/0a56e12fd09dc479-profile_image-300x300.jpeg"
-              width="26"
-              height="26"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          <span
-            style="background: linear-gradient(90deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(180deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(270deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(360deg, transparent, #FF0000)"
-          ></span>
-          yea that's life
-        </div>
-      </div>
-    </div>
-    <div id="animation">
-      <div class="meta">
-        <div class="animateName" style="background-color:#FF0000">
-          <div class="name">DatSheppy<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"
-              class="badge subscriber-icon"
-          /></span>
-
-          
-
-          <div class="i profile">
-            <img
-              class="message-DatSheppy-avatar avatar"
-              src="https://static-cdn.jtvnw.net/jtv_user_pictures/108866a3-c9f1-4968-beb6-78ad8bd24e32-profile_image-300x300.png"
-              width="26"
-              height="26"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          <span
-            style="background: linear-gradient(90deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(180deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(270deg, transparent, #FF0000);"
-          ></span>
-          <span
-            style="background: linear-gradient(360deg, transparent, #FF0000)"
-          ></span>
-          Its happening guys
-        </div>
-      </div>
-    </div>
-    <div id="animation">
-      <div class="meta">
-        <div class="animateName" style="background-color:#8A2BE2">
-          <div class="name">Z4NN1N<span class="extra"></span></div>
-          <span class="badges"
-            ><img
-              src="https://static-cdn.jtvnw.net/badges/v1/5d9f2208-5dd8-11e7-8513-2ff4adfae661/1"
-              class="badge subscriber-icon"/><img
-              src="https://static-cdn.jtvnw.net/badges/v1/bbbe0db0-a598-423e-86d0-f9fb98ca1933/1"
-              class="badge premium-icon"
-          /></span>
-
-          
-
-          <div class="i profile">
-            <img
-              class="message-Z4NN1N-avatar avatar"
-              src="https://static-cdn.jtvnw.net/jtv_user_pictures/1454c192-f53f-48e6-9104-ec817681408a-profile_image-300x300.png"
-              width="26"
-              height="26"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="message">
-        <div id="ca" class="container-message">
-          <span
-            style="background: linear-gradient(90deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(180deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(270deg, transparent, #8A2BE2);"
-          ></span>
-          <span
-            style="background: linear-gradient(360deg, transparent, #8A2BE2)"
-          ></span>
-          you always think that...
-        </div>
-      </div>
-    </div>
-
   </div>
 </template>
 
 <script setup>
+
+const props = defineProps({
+  messages: {
+    type: Object,
+  }
+})
 
 
 </script>
@@ -211,18 +47,20 @@
 
 
 #log {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 98%;
   bottom: 0;
-  top: 2rem;
   padding: 0 10px 10px;
 }
 
 #animation {
+  animation: bounceInUp 0.66s ease-in-out forwards;
+}
+
+#log > div {
   position: relative;
   padding-top: 21px;
   margin-bottom: 10px;
-  animation: bounceInUp 0.66s ease-in-out forwards;
 }
 
 

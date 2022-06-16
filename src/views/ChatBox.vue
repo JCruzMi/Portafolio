@@ -18,7 +18,9 @@
       <div class="chat">
         <Ryumi :messages="messages" v-if="selected=='ryumi'" />
         <Console :messages="messages" v-if="selected=='console'" />
-
+        <Aki :messages="messages" v-if="selected=='aki'" />
+        <Glass :messages="messages" v-if="selected=='glass'" />
+        <Vyre :messages="messages" v-if="selected=='vyre'" />
       </div>
       <div class="chat-wrapper">
 
@@ -33,6 +35,9 @@
 
 import Ryumi from '@/components/chatboxs/Ryumi'
 import Console from '@/components/chatboxs/Console'
+import Aki from '@/components/chatboxs/Aki'
+import Glass from '@/components/chatboxs/Glass'
+import Vyre from '@/components/chatboxs/Vyre'
 
 import { ref } from 'vue'
 
@@ -64,10 +69,19 @@ const message = ref("")
 
 const list = [
     {
-        nombre:"ryumi",
+      nombre:"ryumi",
     },
     {
-        nombre:"console",
+      nombre:"console",
+    },
+    {
+      nombre:"aki",
+    },
+    {
+      nombre:"glass",
+    },
+    {
+      nombre:"vyre",
     }
     ]
 
@@ -81,7 +95,7 @@ function send (){
   if(message.value!=""){
 
     const data = {
-      nameUser: "tu",
+      nameUser: "usuario",
     userImg: "https://miregion360.com/wp-content/uploads/2018/02/Burra-con-mo%C3%B1o.jpg",
     message: message.value,
     badges: [],

@@ -1,8 +1,10 @@
 <template>
   <div id="log" >
+    
     <div id="animation" v-for="message in messages" :key="message">
       <div class="meta">
-        <div class="animateName" :style="{backgroundColor: message.color}">
+        
+        <div class="animateName" >
           <div class="name">{{message.nameUser}}<span class="extra"></span></div>
           <div v-if="message.badges.length > 0">
             <span class="badges" v-for="bag in message.badges" :key="bag">
@@ -38,7 +40,7 @@ const props = defineProps({
   messages: {
     type: Object,
   }
-});
+})
 
 
 </script>
@@ -64,10 +66,16 @@ const props = defineProps({
 }
 
 
+#log > div {
+  animation: bounceInUp 0.66s ease-in-out forwards;
+}
+
+
 /* ===== name ===== */
 #log .meta {
   top: .5rem;
   position: absolute;
+  color: rgb(24, 24, 24);
   line-height: 15px;
   z-index: 1;
   font-size: 16px;
@@ -79,23 +87,21 @@ const props = defineProps({
 }
 
 #log .meta .animateName {
-  border-radius: 20px;
+  border-radius: 6px;
   padding: .3rem .3rem;
-  animation: reducetime 1000ms ease-in-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: blue;
 }
 
 
 #log .meta .animateName .name {
   display: inline-block;
-  padding: .3rem .5rem .2rem .5rem;
+  padding: .3rem .5rem;
   border-radius: 15px;
-  background-color: rgba(228, 228, 228, 0.377);
+  color: white;
   margin-left: 2rem;
-  animation: reducetime 1500ms ease-in-out forwards;
-  color: #000;
 }
 
 
@@ -109,15 +115,16 @@ const props = defineProps({
 
 #log .message .container-message {
   box-shadow: 10px 10px 10px rgba(9, 19, 20, 0.35);
-  background: white;
+  background: white; 
   color: black;
   padding: 12px 12px 12px 12px;
-  border-radius: 10px 10px 10px 10px;
+  border: 0 solid;
+  border-radius: 0px;
   display: inline-block;
   font-size: 18px;
   word-break: break-word;
-  opacity: 1;
-  margin-left: 1rem;
+  opacity: calc(100 / 100);
+  margin-left: 2rem;
   margin-top: .25rem;
 }
 
@@ -139,17 +146,16 @@ const props = defineProps({
   justify-content: center;
   margin-left: 5px;
 	z-index: 70;
-  animation: reducetime 1500ms ease-in-out forwards;
 
 }
-#log .meta .badges > img {
+#log .meta .badges > img { 
   border-radius: 50%;
-  width: 16px;
+  width: 16px; 
   height: 16px;
   margin-right: .2rem;
 }
 
-#log .meta .badges > img:last-child {
+#log .meta .badges > img:last-child { 
 	  margin-right: 0;
 }
 
@@ -159,7 +165,7 @@ const props = defineProps({
   position: absolute;
   top:0;
   left:0;
-
+  
 }
 
 
@@ -169,32 +175,23 @@ const props = defineProps({
   border-radius: 50%;
   position: absolute;
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 20px 0px 0px 20px;
   z-index: 100;
-  background-color: white;
-}
 
+  
+}
 #log  .i > img {
   border-radius: 50%;
 }
 
 #log .profile{
-  display: flex;
-  text-align:center;
   left: 2px;
+  top: 3px;
 }
 
 
-/* ==== Emotes ==== */
 
-#log .message .container-message .emote {
-  background-image: none !important;
-}
-#log .message .container-message .emote img {
-  max-width: 20px;
-}
-
-@keyframes bounceInUp-data-v-97e20baa {
+@keyframes bounceInUp {
   0% {
     opacity: 0;
     transform: translateY(50vh);
@@ -210,18 +207,9 @@ const props = defineProps({
     transform: translateY(0);
   }
 }
-@keyframes reducetime-97e20baa {
-    0% {
-        width: 25px;
-        opacity: 0;
-        color: transparent;
-      	display: None;
-    }
-    100% {
-        opacity: 1;
-        width: 100%;
-    }
+@keyframes grow {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
 }
-
 
 </style>
